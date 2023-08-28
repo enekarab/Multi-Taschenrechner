@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Erweiterter Taschenrechner</title>
+
+    <script>
+        var vZ1;
+        var vZ2;
+        var vErgebnis;
+
+        function fAddition() {
+            vZ1 = parseFloat(document.getElementById("idZ1").value);
+            vZ2 = parseFloat(document.getElementById("idZ2").value);
+            vErgebnis = vZ1 + vZ2;
+            document.getElementById("idErgebnis").textContent = "Ergebnis lautet: " + vErgebnis;
+        }
+
+        function fSubtraktion() {
+            vZ1 = parseFloat(document.getElementById("idZ1").value);
+            vZ2 = parseFloat(document.getElementById("idZ2").value);
+            vErgebnis = vZ1 - vZ2;
+            document.getElementById("idErgebnis").textContent = "Ergebnis lautet: " + vErgebnis;
+        }
+
+        function fMultiplikation() {
+            vZ1 = parseFloat(document.getElementById("idZ1").value);
+            vZ2 = parseFloat(document.getElementById("idZ2").value);
+            vErgebnis = vZ1 * vZ2;
+            document.getElementById("idErgebnis").textContent = "Ergebnis lautet: " + vErgebnis;
+        }
+
+        function fDividieren() {
+            vZ1 = parseFloat(document.getElementById("idZ1").value);
+            vZ2 = parseFloat(document.getElementById("idZ2").value);
+
+            if (vZ2 === 0) {
+                vErgebnis = "Keine Division durch 0";
+            } else {
+                vErgebnis = vZ1 / vZ2;
+            }
+
+            document.getElementById("idErgebnis").textContent = "Ergebnis lautet: " + vErgebnis;
+        }
+
+        function fModulo() {
+            vZ1 = parseFloat(document.getElementById("idZ1").value);
+            vZ2 = parseFloat(document.getElementById("idZ2").value);
+
+            if (vZ2 === 0) {
+                vErgebnis = "Ungültiger Modulo-Wert";
+            } else {
+                vErgebnis = vZ1 % vZ2;
+            }
+
+            document.getElementById("idErgebnis").textContent = "Ergebnis lautet: " + vErgebnis;
+        }
+
+        function fQuadratwurzel() {
+            vZ1 = parseFloat(document.getElementById("idZ1").value);
+            vErgebnis = Math.sqrt(vZ1);
+            document.getElementById("idErgebnis").textContent = "Ergebnis lautet: " + vErgebnis;
+        }
+    </script>
+</head>
+<body>
+    <style>
+       body {
+          background-color: rgb(0, 0, 0);
+        }
+
+        h1 {
+            color: aliceblue;
+        }
+
+        h5 {
+            color:aliceblue
+        }
+
+        div {
+            color: aliceblue;
+        }
+    </style>
+    <h1>Multi-Taschenrechner</h1>
+    <h5>von Enes F. Karabag / ASM1</h5>
+
+    (<input id="idZ1" type="number" value="">)
+    (<input id="idZ2" type="number" value="">)
+
+    <br><br>
+    <button type="button" class="btn btn-primary">Addition</button><br><br>
+    <button type="button" class="btn btn-success">Subtraktion</button><br><br>
+    <button type="button" class="btn btn-danger">Multiplikation</button><br><br>
+    <button type="button" class="btn btn-warning">Dividieren</button><br><br>
+    <button type="button" class="btn btn-info">Modulo</button><br><br>
+    <button type="button" class="btn btn-dark">Quadratwurzel</button><br><br>
+    
+    <div id="idErgebnis">Ergebnis ...</div>
+</body>
+</html>
