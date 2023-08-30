@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>Erweiterter Taschenrechner</title>
+    <title>Multi-Taschenrechner</title>
 
     <script>
         var vZ1;
@@ -92,12 +92,12 @@
     (<input id="idZ2" type="number" value="">)
 
     <br><br>
-    <button type="button" class="btn btn-primary">Addition</button><br><br>
-    <button type="button" class="btn btn-success">Subtraktion</button><br><br>
-    <button type="button" class="btn btn-danger">Multiplikation</button><br><br>
-    <button type="button" class="btn btn-warning">Dividieren</button><br><br>
-    <button type="button" class="btn btn-info">Modulo</button><br><br>
-    <button type="button" class="btn btn-dark">Quadratwurzel</button><br><br>
+    <button onclick="fAddition();"    type="button" class="btn btn-primary">Addition</button><br><br>
+    <button onclick="fSubtraktion();"    type="button" class="btn btn-success">Subtraktion</button><br><br>
+    <button onclick="fMultiplikation();"    type="button" class="btn btn-danger">Multiplikation</button><br><br>
+    <button onclick="fDividieren();"    type="button" class="btn btn-warning">Dividieren</button><br><br>
+    <button onclick="fModulo();"    type="button" class="btn btn-info">Modulo</button><br><br>
+    <button onclick="fQuadratwurzel();"    type="button" class="btn btn-dark">Quadratwurzel</button><br><br>
     
     <div id="idErgebnis">Ergebnis ...</div>
 </body>
